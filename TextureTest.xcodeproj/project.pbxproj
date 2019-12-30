@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		49646F1A23B9CC7B00516755 /* ExampleNode1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49646F1923B9CC7B00516755 /* ExampleNode1.swift */; };
 		49A8BE7723B9DBCE00A0C35D /* ExampleNode2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7623B9DBCE00A0C35D /* ExampleNode2.swift */; };
+		49A8BE7923B9E24600A0C35D /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7823B9E24600A0C35D /* ExampleViewController.swift */; };
+		49A8BE7B23B9E2B300A0C35D /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7A23B9E2B300A0C35D /* ExampleTableViewController.swift */; };
 		49E14FCA23B5F5F900923A76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E14FC923B5F5F900923A76 /* AppDelegate.swift */; };
 		49E14FCC23B5F5F900923A76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E14FCB23B5F5F900923A76 /* SceneDelegate.swift */; };
 		49E14FCE23B5F5F900923A76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E14FCD23B5F5F900923A76 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 		3C3BC1ABF98473DCF3932866 /* Pods_TextureTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49646F1923B9CC7B00516755 /* ExampleNode1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNode1.swift; sourceTree = "<group>"; };
 		49A8BE7623B9DBCE00A0C35D /* ExampleNode2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNode2.swift; sourceTree = "<group>"; };
+		49A8BE7823B9E24600A0C35D /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		49A8BE7A23B9E2B300A0C35D /* ExampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
 		49E14FC623B5F5F900923A76 /* TextureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E14FC923B5F5F900923A76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49E14FCB23B5F5F900923A76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			children = (
 				49646F1923B9CC7B00516755 /* ExampleNode1.swift */,
 				49A8BE7623B9DBCE00A0C35D /* ExampleNode2.swift */,
+				49A8BE7823B9E24600A0C35D /* ExampleViewController.swift */,
+				49A8BE7A23B9E2B300A0C35D /* ExampleTableViewController.swift */,
 			);
 			path = ExampleNode;
 			sourceTree = "<group>";
@@ -366,8 +372,10 @@
 				49A8BE7723B9DBCE00A0C35D /* ExampleNode2.swift in Sources */,
 				49E14FCE23B5F5F900923A76 /* ViewController.swift in Sources */,
 				49E14FCA23B5F5F900923A76 /* AppDelegate.swift in Sources */,
+				49A8BE7B23B9E2B300A0C35D /* ExampleTableViewController.swift in Sources */,
 				49646F1A23B9CC7B00516755 /* ExampleNode1.swift in Sources */,
 				49E14FCC23B5F5F900923A76 /* SceneDelegate.swift in Sources */,
+				49A8BE7923B9E24600A0C35D /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
