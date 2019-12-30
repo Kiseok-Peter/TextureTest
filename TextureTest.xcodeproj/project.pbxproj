@@ -11,6 +11,8 @@
 		49A8BE7723B9DBCE00A0C35D /* ExampleNode2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7623B9DBCE00A0C35D /* ExampleNode2.swift */; };
 		49A8BE7923B9E24600A0C35D /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7823B9E24600A0C35D /* ExampleViewController.swift */; };
 		49A8BE7B23B9E2B300A0C35D /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7A23B9E2B300A0C35D /* ExampleTableViewController.swift */; };
+		49A8BE7E23B9EB3100A0C35D /* FlextBoxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7D23B9EB3100A0C35D /* FlextBoxNode.swift */; };
+		49A8BE8023B9FA9600A0C35D /* FlexBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7F23B9FA9600A0C35D /* FlexBoxViewController.swift */; };
 		49E14FCA23B5F5F900923A76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E14FC923B5F5F900923A76 /* AppDelegate.swift */; };
 		49E14FCC23B5F5F900923A76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E14FCB23B5F5F900923A76 /* SceneDelegate.swift */; };
 		49E14FCE23B5F5F900923A76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E14FCD23B5F5F900923A76 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		49A8BE7623B9DBCE00A0C35D /* ExampleNode2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNode2.swift; sourceTree = "<group>"; };
 		49A8BE7823B9E24600A0C35D /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		49A8BE7A23B9E2B300A0C35D /* ExampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
+		49A8BE7D23B9EB3100A0C35D /* FlextBoxNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlextBoxNode.swift; sourceTree = "<group>"; };
+		49A8BE7F23B9FA9600A0C35D /* FlexBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexBoxViewController.swift; sourceTree = "<group>"; };
 		49E14FC623B5F5F900923A76 /* TextureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E14FC923B5F5F900923A76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49E14FCB23B5F5F900923A76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 			path = ExampleNode;
 			sourceTree = "<group>";
 		};
+		49A8BE7C23B9EB1800A0C35D /* FlextBox */ = {
+			isa = PBXGroup;
+			children = (
+				49A8BE7D23B9EB3100A0C35D /* FlextBoxNode.swift */,
+				49A8BE7F23B9FA9600A0C35D /* FlexBoxViewController.swift */,
+			);
+			path = FlextBox;
+			sourceTree = "<group>";
+		};
 		49E14FBD23B5F5F900923A76 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +149,7 @@
 		49E14FC823B5F5F900923A76 /* TextureTest */ = {
 			isa = PBXGroup;
 			children = (
+				49A8BE7C23B9EB1800A0C35D /* FlextBox */,
 				49646F1823B9CC6900516755 /* ExampleNode */,
 				49E14FC923B5F5F900923A76 /* AppDelegate.swift */,
 				49E14FCB23B5F5F900923A76 /* SceneDelegate.swift */,
@@ -369,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A8BE8023B9FA9600A0C35D /* FlexBoxViewController.swift in Sources */,
 				49A8BE7723B9DBCE00A0C35D /* ExampleNode2.swift in Sources */,
 				49E14FCE23B5F5F900923A76 /* ViewController.swift in Sources */,
 				49E14FCA23B5F5F900923A76 /* AppDelegate.swift in Sources */,
@@ -376,6 +391,7 @@
 				49646F1A23B9CC7B00516755 /* ExampleNode1.swift in Sources */,
 				49E14FCC23B5F5F900923A76 /* SceneDelegate.swift in Sources */,
 				49A8BE7923B9E24600A0C35D /* ExampleViewController.swift in Sources */,
+				49A8BE7E23B9EB3100A0C35D /* FlextBoxNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
