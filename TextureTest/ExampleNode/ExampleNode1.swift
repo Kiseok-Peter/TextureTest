@@ -1,5 +1,5 @@
 //
-//  ExampleNode.swift
+//  ExampleNode1.swift
 //  TextureTest
 //
 //  Created by 박기석 on 2019/12/30.
@@ -8,7 +8,7 @@
 
 import AsyncDisplayKit
 
-class ExampleNode: ASDisplayNode {
+class ExampleNode1: ASDisplayNode {
     
     // MARK: UI Properties
     
