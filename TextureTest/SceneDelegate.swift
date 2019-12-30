@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        window?.rootViewController = SingleViewController()
+        window?.rootViewController = FlexBoxViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -121,8 +121,8 @@
 		49A8BE7C23B9EB1800A0C35D /* FlextBox */ = {
 			isa = PBXGroup;
 			children = (
-				49A8BE7D23B9EB3100A0C35D /* FlextBoxNode.swift */,
 				49A8BE7F23B9FA9600A0C35D /* FlexBoxViewController.swift */,
+				49A8BE7D23B9EB3100A0C35D /* FlextBoxNode.swift */,
 			);
 			path = FlextBox;
 			sourceTree = "<group>";

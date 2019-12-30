@@ -44,16 +44,13 @@ class SingleNode: ASDisplayNode {
     
     override func didLoad() {
         super.didLoad()
-        // TODO: Main Thread에서 접근 가능한 Property를 사용
     }
     
     override func layout() {
         super.layout()
-        // TODO: layout변화에 따른 업데이트가 필요한 추가적인 요소를 처리합니다.
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        // TODO: 순수하게 Texture에서 제공해주는 LayoutSpec 및 Layout Elements Properties 만 사용
         let imageLayout = ASRatioLayoutSpec(ratio: 1.0, child: imageNode)
         imageLayout.style.flexShrink = 1.0
         
@@ -71,4 +68,3 @@ class SingleNode: ASDisplayNode {
         return ASInsetLayoutSpec(insets: containerInsets, child: containerLayout)
     }
 }
-

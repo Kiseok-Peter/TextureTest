@@ -14,14 +14,22 @@ class FlexBoxNode: ASDisplayNode {
     
     let imageNode: ASImageNode = {
         let node = ASImageNode()
-        node.backgroundColor = .blue
+        node.image = UIImage(named: "Image")
+        node.borderColor = UIColor.gray.cgColor
+        node.borderWidth = 1
+        node.cornerRadius = 15
+        node.contentMode = .scaleAspectFit
         return node
     }()
     
     let titleNode: ASTextNode = {
         let node = ASTextNode()
-        node.attributedText = NSAttributedString(string: "asdfasef asdfasef asdfasef asdfasef asdfasef asdfasef")
-        node.backgroundColor = .red
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        node.attributedText = NSAttributedString(string: "asdfasef asdfasef asdfasef asdfasef asdfasef asdfasef asdfasef asdfasef asdfasef asdfasef asdfasef asdfasef",
+                                                 attributes: [.font: UIFont.boldSystemFont(ofSize: 15),
+                                                              .foregroundColor: UIColor.gray,
+                                                              .paragraphStyle: paragraphStyle])
         return node
     }()
     
@@ -29,18 +37,16 @@ class FlexBoxNode: ASDisplayNode {
     
     override init() {
         super.init()
-        // TODO: Background Thread에서 동작
         self.automaticallyManagesSubnodes = true
+        self.automaticallyRelayoutOnSafeAreaChanges = true
     }
     
     override func didLoad() {
         super.didLoad()
-        // TODO: Main Thread에서 접근 가능한 Property를 사용
     }
     
     override func layout() {
         super.layout()
-        // TODO: layout변화에 따른 업데이트가 필요한 추가적인 요소를 처리합니다.
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -48,16 +54,21 @@ class FlexBoxNode: ASDisplayNode {
         imageLayout.style.width = .init(unit: .points, value: 50.0)
         
         imageLayout.style.flexShrink = 0.0
-        imageLayout.style.flexGrow = 0.0
-        titleNode.style.flexShrink = 0.0
-        titleNode.style.flexGrow = 0.0
+        imageLayout.style.flexGrow = 1.0
+        titleNode.style.flexShrink = 1.0
+        titleNode.style.flexGrow = 1.0
         
         let containerLayout = ASStackLayoutSpec(direction: .horizontal,
                                                 spacing: 10,
-                                                justifyContent: .start,
-                                                alignItems: .stretch,
+                                                justifyContent: .center,
+                                                alignItems: .center,
                                                 children: [imageLayout, titleNode])
         
-        return ASInsetLayoutSpec(insets: .zero, child: containerLayout)
+        var containerInsets: UIEdgeInsets = self.safeAreaInsets
+        containerInsets.left += 15
+        containerInsets.right += 15
+        containerInsets.top = containerInsets.bottom
+        
+        return ASInsetLayoutSpec(insets: containerInsets, child: containerLayout)
     }
 }
