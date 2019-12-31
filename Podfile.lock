@@ -5,6 +5,9 @@ PODS:
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -21,7 +24,8 @@ PODS:
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
   - Result (4.1.0)
-  - RxSwift (5.0.1)
+  - RxSwift (4.5.0)
+  - Sniffer (2.0.0)
   - SwiftLint (0.38.0)
   - Texture (2.8.1):
     - Texture/AssetsLibrary (= 2.8.1)
@@ -46,7 +50,9 @@ PODS:
 
 DEPENDENCIES:
   - Moya
+  - Moya/RxSwift
   - RxSwift
+  - Sniffer
   - SwiftLint
   - Texture
 
@@ -59,6 +65,7 @@ SPEC REPOS:
     - PINRemoteImage
     - Result
     - RxSwift
+    - Sniffer
     - SwiftLint
     - Texture
 
@@ -69,10 +76,11 @@ SPEC CHECKSUMS:
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  Sniffer: 8818aff78371938472e70121eff907f5b0928049
   SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
 
-PODFILE CHECKSUM: 9bbc54961e02e593d1e509a5b3123f2fa6f840d3
+PODFILE CHECKSUM: 1d1c49987c2b7033f1267138aba2bbe861ea541f
 
 COCOAPODS: 1.8.4

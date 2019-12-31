@@ -10,8 +10,11 @@ target 'TextureTest' do
   # Rx
   pod 'RxSwift'
   
+  pod 'Moya/RxSwift'
+  
   # Network
   pod 'Moya'
+  pod 'Sniffer'
   
   # Image
   
