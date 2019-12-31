@@ -8,6 +8,7 @@ target 'TextureTest' do
   
   # Pods for TextureTest
   # Rx
+  pod 'RxSwift'
   
   # Network
   pod 'Moya'
