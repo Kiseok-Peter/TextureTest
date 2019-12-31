@@ -10,6 +10,7 @@ target 'TextureTest' do
   # Rx
   
   # Network
+  pod 'Moya'
   
   # Image
   

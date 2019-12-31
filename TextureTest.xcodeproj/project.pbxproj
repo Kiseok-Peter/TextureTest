@@ -131,6 +131,20 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		4974AB9623BAF6C800BD41D0 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		4974AB9823BAF72D00BD41D0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		49A8BE7C23B9EB1800A0C35D /* FlextBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +189,8 @@
 		49E14FC823B5F5F900923A76 /* TextureTest */ = {
 			isa = PBXGroup;
 			children = (
+				4974AB9823BAF72D00BD41D0 /* Network */,
+				4974AB9623BAF6C800BD41D0 /* Movie */,
 				4974AB9123BAE24200BD41D0 /* List */,
 				49A8BE8223BA007300A0C35D /* Single */,
 				49A8BE7C23B9EB1800A0C35D /* FlextBox */,
