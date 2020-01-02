@@ -22,6 +22,7 @@ target 'TextureTest' do
   pod 'Texture'
   
   # Parse
+  pod 'ObjectMapper'
   
   # Etc
   pod 'SwiftLint'
