@@ -11,6 +11,7 @@ target 'TextureTest' do
   pod 'RxSwift'
   
   pod 'Moya/RxSwift'
+  pod 'RxOptional'
   
   # Network
   pod 'Moya'
