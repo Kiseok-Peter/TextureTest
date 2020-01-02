@@ -18,6 +18,7 @@
 		4974ABB423BB36A800BD41D0 /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4974ABB323BB36A800BD41D0 /* SearchNode.swift */; };
 		4974ABB623BB47FA00BD41D0 /* MovieSearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4974ABB523BB47FA00BD41D0 /* MovieSearchNode.swift */; };
 		4974ABB823BB679B00BD41D0 /* MovieCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4974ABB723BB679B00BD41D0 /* MovieCellNode.swift */; };
+		4974ABBD23BDA12800BD41D0 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4974ABBC23BDA12800BD41D0 /* MovieModel.swift */; };
 		49A8BE7723B9DBCE00A0C35D /* ExampleNode2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7623B9DBCE00A0C35D /* ExampleNode2.swift */; };
 		49A8BE7923B9E24600A0C35D /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7823B9E24600A0C35D /* ExampleViewController.swift */; };
 		49A8BE7B23B9E2B300A0C35D /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8BE7A23B9E2B300A0C35D /* ExampleTableViewController.swift */; };
@@ -69,6 +70,7 @@
 		4974ABB323BB36A800BD41D0 /* SearchNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
 		4974ABB523BB47FA00BD41D0 /* MovieSearchNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchNode.swift; sourceTree = "<group>"; };
 		4974ABB723BB679B00BD41D0 /* MovieCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellNode.swift; sourceTree = "<group>"; };
+		4974ABBC23BDA12800BD41D0 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		49A8BE7623B9DBCE00A0C35D /* ExampleNode2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNode2.swift; sourceTree = "<group>"; };
 		49A8BE7823B9E24600A0C35D /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		49A8BE7A23B9E2B300A0C35D /* ExampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,14 @@
 			path = Node;
 			sourceTree = "<group>";
 		};
+		4974ABB923BDA0F700BD41D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4974ABBC23BDA12800BD41D0 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		49A8BE7C23B9EB1800A0C35D /* FlextBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 		49E14FC823B5F5F900923A76 /* TextureTest */ = {
 			isa = PBXGroup;
 			children = (
+				4974ABB923BDA0F700BD41D0 /* Model */,
 				4974ABAA23BB307100BD41D0 /* Core */,
 				4974AB9E23BB047500BD41D0 /* Service */,
 				4974AB9823BAF72D00BD41D0 /* Network */,
@@ -486,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4974ABBD23BDA12800BD41D0 /* MovieModel.swift in Sources */,
 				4974ABB623BB47FA00BD41D0 /* MovieSearchNode.swift in Sources */,
 				49A8BE8023B9FA9600A0C35D /* FlexBoxViewController.swift in Sources */,
 				49A8BE8623BA078D00A0C35D /* SingleNode.swift in Sources */,

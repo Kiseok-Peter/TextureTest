@@ -12,9 +12,19 @@ class MovieCellNode: ASCellNode {
     
     // MARK: UI Properties
     
-    let imageNode: ASImageNode = {
-        let node = ASImageNode()
-        node.image = UIImage(named: "Image")
+//    let imageNode: ASImageNode = {
+//        let node = ASImageNode()
+//        node.image = UIImage(named: "Image")
+//        node.borderColor = UIColor.gray.cgColor
+//        node.borderWidth = 1
+//        node.cornerRadius = 15
+//        node.contentMode = .scaleAspectFit
+//        return node
+//    }()
+    
+    let imageNode: ASNetworkImageNode = {
+        let node = ASNetworkImageNode()
+        node.defaultImage = UIImage(named: "Image")
         node.borderColor = UIColor.gray.cgColor
         node.borderWidth = 1
         node.cornerRadius = 15
@@ -28,14 +38,16 @@ class MovieCellNode: ASCellNode {
         return node
     }()
     
-    init(item: String) {
+    init(item: MovieItem) {
         super.init()
         self.automaticallyManagesSubnodes = true
         self.selectionStyle = .none
         self.backgroundColor = .white
-        self.titleNode.attributedText = NSAttributedString(string: item,
+        
+        self.titleNode.attributedText = NSAttributedString(string: item.title,
                                                            attributes: [.font: UIFont.boldSystemFont(ofSize: 15),
                                                                         .foregroundColor: UIColor.gray])
+        self.imageNode.url = URL(string: item.image)
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

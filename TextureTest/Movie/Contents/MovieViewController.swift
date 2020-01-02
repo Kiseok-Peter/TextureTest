@@ -10,7 +10,13 @@ import AsyncDisplayKit
 
 class MovieViewController: ASViewController<MovieSearchNode> {
     
-    var items: [String] = ["a", "b", "c", "d"]
+    var disposeBag = DisposeBag()
+    
+    var items: [MovieItem] = [] {
+        didSet {
+            node.tableNode.reloadData()
+        }
+    }
     
     init() {
         super.init(node: MovieSearchNode.init())
@@ -50,6 +56,14 @@ extension MovieViewController: ASTableDelegate {
 extension MovieViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        Observable<String>.just(searchText)
+            .flatMap { NetworkService.shared.request(.search($0)) }
+            .map { MovieModel(JSONString: $0) }
+            .filterNil()
+            .map { $0.items }
+            .subscribe(onNext: { [weak self] in
+                self?.items = $0
+            })
+            .disposed(by: self.disposeBag)
     }
 }
