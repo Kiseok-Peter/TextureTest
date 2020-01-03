@@ -23,16 +23,28 @@ struct MovieModel: Mappable {
 
 struct MovieItem: Mappable {
     
-    var title: String
     var image: String
+    var title: String
+    var subtitle: String
+    var director: String
+    var actor: String
+    var userRating: String
     
     init?(map: Map) {
-        title = ""
         image = ""
+        title = ""
+        subtitle = ""
+        director = ""
+        actor = ""
+        userRating = ""
     }
     
     mutating func mapping(map: Map) {
-        title   <- map["title"]
-        image   <- map["image"]
+        image       <- map["image"]
+        title       <- map["title"]
+        subtitle    <- map["subtitle"]
+        director    <- map["director"]
+        actor       <- map["actor"]
+        userRating  <- map["userRating"]
     }
 }

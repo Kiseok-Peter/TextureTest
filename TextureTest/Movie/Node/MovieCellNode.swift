@@ -12,29 +12,43 @@ class MovieCellNode: ASCellNode {
     
     // MARK: UI Properties
     
-//    let imageNode: ASImageNode = {
-//        let node = ASImageNode()
-//        node.image = UIImage(named: "Image")
-//        node.borderColor = UIColor.gray.cgColor
-//        node.borderWidth = 1
-//        node.cornerRadius = 15
-//        node.contentMode = .scaleAspectFit
-//        return node
-//    }()
-    
     let imageNode: ASNetworkImageNode = {
         let node = ASNetworkImageNode()
         node.defaultImage = UIImage(named: "Image")
         node.borderColor = UIColor.gray.cgColor
         node.borderWidth = 1
         node.cornerRadius = 15
-        node.contentMode = .scaleAspectFit
+        node.contentMode = .scaleAspectFill
         return node
     }()
     
     let titleNode: ASTextNode = {
         let node = ASTextNode()
-        node.maximumNumberOfLines = 1
+        node.maximumNumberOfLines = 0
+        return node
+    }()
+    
+    let subtitleNode: ASTextNode = {
+        let node = ASTextNode()
+        node.maximumNumberOfLines = 0
+        return node
+    }()
+    
+    let userRatingNode: ASTextNode = {
+        let node = ASTextNode()
+        node.maximumNumberOfLines = 0
+        return node
+    }()
+    
+    let directorNode: ASTextNode = {
+        let node = ASTextNode()
+        node.maximumNumberOfLines = 0
+        return node
+    }()
+    
+    let actorNode: ASTextNode = {
+        let node = ASTextNode()
+        node.maximumNumberOfLines = 0
         return node
     }()
     
@@ -44,23 +58,36 @@ class MovieCellNode: ASCellNode {
         self.selectionStyle = .none
         self.backgroundColor = .white
         
+        self.imageNode.url = URL(string: item.image)
         self.titleNode.attributedText = NSAttributedString(string: item.title,
                                                            attributes: [.font: UIFont.boldSystemFont(ofSize: 15),
                                                                         .foregroundColor: UIColor.gray])
-        self.imageNode.url = URL(string: item.image)
+        self.subtitleNode.attributedText = NSAttributedString(string: item.subtitle,
+                                                              attributes: [.font: UIFont.boldSystemFont(ofSize: 13),
+                                                                           .foregroundColor: UIColor.lightGray])
+        self.userRatingNode.attributedText = NSAttributedString(string: String(describing: item.userRating),
+                                                                attributes: [.font: UIFont.boldSystemFont(ofSize: 13),
+                                                                             .foregroundColor: UIColor.lightGray])
+        self.directorNode.attributedText = NSAttributedString(string: item.actor,
+        attributes: [.font: UIFont.boldSystemFont(ofSize: 13),
+                     .foregroundColor: UIColor.lightGray])
+        self.actorNode.attributedText = NSAttributedString(string: item.actor,
+                                                           attributes: [.font: UIFont.boldSystemFont(ofSize: 13),
+                                                                        .foregroundColor: UIColor.lightGray])
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let imageLayout = ASRatioLayoutSpec(ratio: 1.0, child: imageNode)
+        let contextLayout = layoutSpecThatFitsContext()
         
         imageLayout.style.flexBasis = ASDimension(unit: .fraction, value: 0.3)
-        titleNode.style.flexBasis = ASDimension(unit: .fraction, value: 0.7)
+        contextLayout.style.flexBasis = ASDimension(unit: .fraction, value: 0.7)
         
         let containerLayout = ASStackLayoutSpec(direction: .horizontal,
                                                 spacing: 10.0,
                                                 justifyContent: .start,
                                                 alignItems: .stretch,
-                                                children: [imageLayout, titleNode])
+                                                children: [imageLayout, contextLayout])
         
         var containerInsets: UIEdgeInsets = .zero
         containerInsets.left = 15.0
@@ -69,5 +96,15 @@ class MovieCellNode: ASCellNode {
         containerInsets.bottom = 15.0
         
         return ASInsetLayoutSpec(insets: containerInsets, child: containerLayout)
+    }
+    
+    private func layoutSpecThatFitsContext() -> ASLayoutSpec {
+        let containerLayout = ASStackLayoutSpec(direction: .vertical,
+                                                spacing: 5.0,
+                                                justifyContent: .start,
+                                                alignItems: .stretch,
+                                                children: [titleNode, subtitleNode, userRatingNode, directorNode, actorNode])
+        
+        return containerLayout
     }
 }
