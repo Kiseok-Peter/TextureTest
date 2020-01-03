@@ -8,8 +8,14 @@ target 'TextureTest' do
   
   # Pods for TextureTest
   # Rx
+  pod 'RxSwift'
+  
+  pod 'Moya/RxSwift'
+  pod 'RxOptional'
   
   # Network
+  pod 'Moya'
+  pod 'Sniffer'
   
   # Image
   
@@ -17,6 +23,7 @@ target 'TextureTest' do
   pod 'Texture'
   
   # Parse
+  pod 'ObjectMapper'
   
   # Etc
   pod 'SwiftLint'

@@ -37,7 +37,7 @@ class SingleNode: ASDisplayNode {
     
     override init() {
         super.init()
-        // TODO: Background Thread에서 동작
+        
         self.automaticallyManagesSubnodes = true
         self.automaticallyRelayoutOnSafeAreaChanges = true
     }
